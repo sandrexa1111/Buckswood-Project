@@ -1,0 +1,101 @@
+/* General Reset */
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Courier New", monospace;
+    background-color: #0D1117; /* Dark background */
+    color: #00FF41; /* Neon Green */
+    text-align: center;
+}
+
+/* Container */
+.container {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #161B22;
+    border: 2px solid #00FF41;
+    border-radius: 10px;
+    box-shadow: 0 0 10px #00FF41;
+}
+
+/* Title */
+h1 {
+    margin-bottom: 20px;
+    font-size: 2.5rem;
+    text-shadow: 0 0 5px #00FF41;
+}
+
+/* Cards */
+.card {
+    margin-bottom: 20px;
+    padding: 20px;
+    background-color: #0D1117;
+    border: 1px solid #00FF41;
+    border-radius: 10px;
+    box-shadow: 0 0 5px #00FF41;
+}
+
+h2 {
+    color: #00FFFF;
+    text-shadow: 0 0 5px #00FFFF;
+}
+
+/* Forms */
+form {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+input[type="password"],
+input[type="number"] {
+    padding: 10px;
+    border: 1px solid #00FF41;
+    border-radius: 5px;
+    background-color: #0D1117;
+    color: #00FF41;
+    outline: none;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #00FF41;
+    color: #0D1117;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background 0.3s, transform 0.2s;
+}
+
+button:hover {
+    background-color: #00FFFF;
+    transform: scale(1.05);
+}
+
+/* Dynamic Strength Colors */
+.text-weak {
+    color: red;
+}
+
+.text-medium {
+    color: orange;
+}
+
+.text-strong {
+    color: green;
+}
+
+/* Paragraphs */
+p {
+    font-size: 1.2rem;
+    margin-top: 10px;
+    color: #FFFFFF;
+}
+
+strong {
+    color: #00FFFF;
+}
