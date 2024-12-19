@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password Toolkit</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>🔐 Password Toolkit</h1>
+        
+        <!-- Password Strength Checker -->
+        <div class="card">
+            <h2>🔍 Password Strength Checker</h2>
+            <form method="POST">
+                <input type="password" name="password" placeholder="Enter Password" required>
+                <button type="submit">Check Strength</button>
+            </form>
+            {% if password_strength %}
+            <p class="{{ strength_class }}">Strength: {{ password_strength }}</p>
+            {% endif %}
+        </div>
+
+        <!-- Password Generator -->
+        <div class="card">
+            <h2>🔑 Password Generator</h2>
+            <form method="POST">
+                <input type="number" name="length" placeholder="Enter Length (e.g., 12)" min="1" required>
+                <button type="submit">Generate Password</button>
+            </form>
+            {% if generated_password %}
+            <p>Your Password: <strong>{{ generated_password }}</strong></p>
+            {% endif %}
+        </div>
+    </div>
+</body>
+</html>
