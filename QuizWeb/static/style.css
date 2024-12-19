@@ -1,0 +1,194 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #0D1117; /* Dark background */
+    color: #00FF41; /* Neon Green */
+    line-height: 1.6;
+}
+
+/* Container */
+.container {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Header */
+h1 {
+    color: #00FFFF;
+    margin-bottom: 20px;
+    font-size: 2.5rem;
+}
+
+/* Grid Layout */
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    justify-items: center;
+}
+
+/* Card Design */
+.card {
+    background-color: #161B22;
+    border: 1px solid #00FF41;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 255, 65, 0.2);
+    padding: 20px;
+    transition: all 0.3s ease;
+    color: #C8E1FF;
+    text-align: center;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 255, 65, 0.3);
+}
+
+/* Card Title */
+.card h2 {
+    color: #00FFFF;
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+/* Card Button */
+.card a {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 15px;
+    background-color: #00FF41;
+    color: #0D1117;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.card a:hover {
+    background-color: #00FFFF;
+    color: #0D1117;
+    transform: scale(1.05);
+}
+
+/* Submit Button */
+button.btn-submit {
+    background-color: #00FF41;
+    color: #0D1117;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+button.btn-submit:hover {
+    background-color: #00FFFF;
+    color: #0D1117;
+    transform: scale(1.05);
+    box-shadow: 0 4px 10px rgba(0, 255, 65, 0.5);
+}
+
+/* Back to Home Link */
+a.btn-home {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 15px;
+    background-color: #00FFFF;
+    color: #0D1117;
+    font-weight: bold;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+a.btn-home:hover {
+    background-color: #00FF41;
+    color: #0D1117;
+    transform: scale(1.05);
+}
+
+/* Learn Section Links */
+.learn-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+}
+
+.learn-card {
+    background-color: #0D1117;
+    color: #00FF41;
+    border: 1px solid #00FFFF;
+    border-radius: 5px;
+    padding: 15px;
+    width: 200px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 255, 65, 0.3);
+    transition: all 0.3s ease;
+}
+
+.learn-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 255, 65, 0.5);
+}
+
+.learn-card a {
+    color: #00FFFF;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.learn-card a:hover {
+    text-decoration: underline;
+}
+
+/* Form Radio Buttons Styling */
+form label {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 1rem;
+    color: #C8E1FF;
+}
+
+form input[type="radio"] {
+    margin-right: 10px;
+    transform: scale(1.2);
+}
+
+form input[type="radio"]:checked + label {
+    font-weight: bold;
+    color: #00FFFF;
+    transition: color 0.3s ease;
+}
+
+/* Footer Styling */
+.footer {
+    margin-top: 30px;
+    padding: 10px;
+    background-color: #161B22; /* Darker background for footer */
+    color: #00FF41; /* Neon green text */
+    text-align: center;
+    font-size: 0.9rem;
+    border-top: 1px solid #00FFFF; /* Cyan border for contrast */
+}
+
+.footer p {
+    margin: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .card-grid {
+        grid-template-columns: 1fr;
+    }
+}
