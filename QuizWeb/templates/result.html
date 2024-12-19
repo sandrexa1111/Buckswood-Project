@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Quiz Results</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Results for {{ category.replace('_', ' ').capitalize() }}</h1>
+        <p>Your Score: {{ score }} / {{ total }}</p>
+        <div class="results-container">
+            <h2>Answer Breakdown:</h2>
+            <ul>
+                {% for answer in correct_answers %}
+                <li class="{% if answer.user == answer.correct %}correct{% else %}incorrect{% endif %}">
+                    <strong>Question:</strong> {{ answer.question }}<br>
+                    <strong>Your Answer:</strong> {{ answer.user }}<br>
+                    <strong>Correct Answer:</strong> {{ answer.correct }}
+                </li>
+                {% endfor %}
+            </ul>
+        </div>
+        <a href="{{ url_for('index') }}" class="btn-home">🏠 Back to Home</a>
+    </div>
+    <footer>
+        <p>&copy; {{ year }} Python Quiz. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>
