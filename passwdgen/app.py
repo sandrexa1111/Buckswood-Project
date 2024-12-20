@@ -4,7 +4,7 @@ import string
 
 app=Flask(__name__)
 
-# Function to check password strength
+# Function passwordis sizliere
 def check_password_strength(password):
     if len(password)<8:
         return "Weak", "text-weak"
@@ -29,13 +29,13 @@ def index():
 
     if request.method =="POST":
         if "password" in request.form:
-            # Password Strength Checker
+            # Password strenght
             password = request.form["password"]
             password_strength, strength_class = check_password_strength(password)
         elif "length" in request.form:
-            # Password Generator
+            # generator
             length=request.form["length"]
-            if length.isdigit() and int(length) > 0:
+            if length.isdigit() and int(length) >0:
                 generated_password = generate_password(int(length))
             else:
                 generated_password = "Invalid length"
